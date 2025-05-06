@@ -122,3 +122,13 @@ vim.api.nvim_create_user_command("Bufo", "%bd|e#|bd#", {})
 vim.api.nvim_create_user_command("Bufc", "%bd", {})
 
 vim.api.nvim_create_user_command("Delmark", "delmark A-Za-z", {})
+
+vim.api.nvim_create_user_command("Pedantic", function()
+  vim.opt.cursorline = true
+  require("snacks").indent.enable()
+end, { nargs = 0, desc = "Add indent guides and cursorline" })
+
+vim.api.nvim_create_user_command("Simple", function()
+  vim.opt.cursorline = false
+  require("snacks").indent.disable()
+end, { nargs = 0, desc = "Remove indent guides and cursorline" })

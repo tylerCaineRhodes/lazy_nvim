@@ -10,7 +10,7 @@ opt.smoothscroll = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.g.rltvnmbr = true
+vim.g.rltvnmbr = false
 vim.g.annotate_marks = false
 
 -- Basic settings
